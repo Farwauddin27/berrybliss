@@ -1,0 +1,371 @@
+
+ *{
+    font-family: "Philosopher", sans-serif;
+    overflow-x: hidden;
+   margin: 0%;
+   padding: 0%;
+  
+ }
+ ::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color:#FF758F;
+}
+.a{
+    background-color: #FAE0E4;
+  
+
+}
+nav ul li {
+    overflow: hidden;
+    padding-top: 80px; font-weight: bold;
+   font-size: 25px;
+    display: inline-block;
+    list-style: none;
+    text-decoration: none;
+    
+    
+}
+nav ul li :hover{
+    color:  #ff7298;
+    overflow: hidden;
+}
+li a{ overflow: hidden; padding-left: 150px;
+    text-decoration: none;color: #9b2626;
+ 
+}
+header{
+    overflow: hidden;
+    background-color: #FAE0E4;
+}
+.p{
+    color: #a12548;
+    font-size: larger;
+   text-decoration: dotted;
+}
+h3{background-color: #fdbdc4;
+    margin-bottom: 0%;
+    font-size: 60px;
+    color:#fdbdc4;
+    text-align: center;
+    animation: glow 2s ease-in-out infinite alternate;
+    border-style: dotted;border-color: #ffffff
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #902923, 0 0 10px #902923, 0 0 10px #bf4342, 0 0 40px #e60073, 0 0 40px #902923, 0 0 60px #b6465f, 0 0 70px #e60073;
+    }
+    
+    to {
+      text-shadow: 0 0 60px #902923, 0 0 30px #b6465f, 0 0 60px #902923, 0 0 50px #b6465f, 0 0 80px #b6465f, 0 0 70px #b6465f, 0 0 80px #902923;
+    }
+  }
+.button1{
+    border: none;
+    color: #ffffff; font-size: 20px;
+    border-radius: 20px; height:40px; width: 150px ;
+  background-color: #880d1e  }
+  .button1:hover{background-color:#FF758F; color: #590D22;
+
+  }
+  .button2{
+    border-radius: 30px; background-color: #880d1e; border-style: dotted; border-color: #590D22; color: #fafafa; padding: 10px;
+  }
+  .button2:hover{background-color:#FF758F; color: #590D22;
+
+  }
+.b1{
+    margin-top: 80px;
+    margin-left: 600px;
+}
+.bg{
+    background-color: #000000;
+  position: relative;
+    background-image:url(./road.png); height: 50vh;  
+
+    background-size: cover; 
+     -webkit-animation : animate 7s steps(10) infinite;
+background-repeat: repeat-x; 
+
+
+}
+
+.car{
+    
+    position:absolute ;
+overflow-y: hidden;
+bottom: 0px;
+    left: 200px;
+    background-image: url(./BerryBliss.png);
+    background-repeat: no-repeat;
+height:200px;
+   
+  
+} 
+@keyframes animate {
+    from{ background-position:30% 0
+        
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+.modal-title{
+    color: #880d1e;
+}
+.m1{background-color:#FF758F;}
+.modal-content{
+    background-color: #fdbdc4;
+}
+.p1{
+   filter: drop-shadow(8px 15px 15px rgba(179, 54, 54, 0.781));
+   padding: 5px;
+   
+}
+.beat{
+    animation: beat 1.5s  infinite ;
+}
+@keyframes beat {
+0%{
+    transform: scale(1);
+}
+14%{
+    transform: scale(1.1);
+}
+28%{
+    transform: scale(1);
+}
+35%{
+    transform: scale(1.1);
+}
+
+45%{transform:scale(1);}
+55%{
+    transform: scale(1.1);
+}
+65%{
+    transform: scale(1);
+}75%{
+    transform: scale(1.1);
+}
+100%{
+    transform: scale(1);
+}
+
+    
+}
+
+#pre-loader{
+    
+    background: url(./Berry\ Bliss.gif) no-repeat center center;
+    background-size: 100%; 
+height: 100vh;
+width: 100%;
+position: fixed;
+z-index: 100;
+}
+@media (max-width: 576px) {
+  
+  #pre-loader{
+   background-size: 1000px;
+    height: 500px;
+    width: 100%;
+  }}
+
+section {
+    width: 100%;
+    display: inline-block;
+    background:#fdbdc4;
+    height: 50vh;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+  
+  .footer-distributed{
+    background: #ff7298ce;
+    width: 100%;
+    text-align: left;
+    font: bold 16px;
+    padding: 55px 50px;
+  }
+  
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  /* Footer left */
+  
+  .footer-distributed .footer-left{
+    width: 40%;
+  }
+  
+  /* The company logo */
+  
+  .footer-distributed h3{
+    color:  #ffffff;
+   
+    margin: 0;
+  }
+  
+  .footer-distributed h3 span{
+    color:  #e60073;
+  }
+  
+  /* Footer links */
+  
+  .footer-distributed .footer-links{
+    color:  #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+  }
+  
+  .footer-distributed .footer-links a{
+    display:inline-block;
+    line-height: 1.8;
+    font-weight:400;
+    text-decoration: none;
+    color:  inherit;
+  }
+  
+  .footer-distributed .footer-company-name{
+    color:  #e60073;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  /* Footer Center */
+  
+  .footer-distributed .footer-center{
+    width: 35%;
+  }
+  
+  .footer-distributed .footer-center i{
+  
+    color: #da3158;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+  }
+  
+  .footer-distributed .footer-center i.fa-envelope{
+    font-size: 17px;
+    line-height: 38px;
+  }
+  
+  .footer-distributed .footer-center p{
+    display: inline-block;
+    color: #b7314c;
+    font-weight:400;
+    vertical-align: middle;
+    margin:0;
+  }
+  
+  .footer-distributed .footer-center p span{
+    display:block;
+    font-weight: normal;
+    font-size:14px;
+    line-height:2;
+  }
+  
+  .footer-distributed .footer-center p a{
+    color: #a83e4f;
+    text-decoration: none;;
+  }
+  
+  .footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight:300;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+  }
+  
+  .footer-distributed .footer-links .link-1:before {
+    content: none;
+  }
+  
+  /* Footer Right */
+  
+  .footer-distributed .footer-right{
+    width: 20%;
+  }
+  
+  .footer-distributed .footer-company-about{
+    line-height: 20px;
+    color:  #590D22;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  .footer-distributed .footer-company-about span{
+    display: block;
+    color:  #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .footer-distributed .footer-icons{
+    margin-top: 25px;
+  }
+  
+  .footer-distributed .footer-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color:  #fdbdc4;
+    border-radius: 2px;
+  
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+  
+    margin-right: 3px;
+    margin-bottom: 5px;
+  }
+  
+  /* If you don't want the footer to be responsive, remove these media queries */
+  
+  @media (max-width: 880px) {
+  
+    .footer-distributed{
+      font: bold 14px sans-serif;
+    }
+  
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  
+    .footer-distributed .footer-center i{
+      margin-left: 0;
+    }
+  
+  }
+  
