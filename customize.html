@@ -35,7 +35,7 @@
 }
 nav ul li {
     overflow: hidden;
-    padding-top: 80px; font-weight: bold;
+    padding-top: 50px; font-weight: bold;
    font-size: 25px;
     display: inline-block;
     list-style: none;
@@ -49,13 +49,13 @@ nav ul li :hover{
 }
 li a{ overflow: hidden; padding-left: 150px;
     text-decoration: none;color: #9b2626;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 
    .c{
     padding-top: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     color:#de2d5c;
 
    }
@@ -63,6 +63,10 @@ li a{ overflow: hidden; padding-left: 150px;
     color: #de2d5c;
    }
    .b1:hover{
+    background-color: #831a4f;
+    color: #ffffff;
+   }
+   .b1:focus{
     color: #FAE0E4;
     background-color: #de2d5c;
    }
@@ -82,6 +86,10 @@ li a{ overflow: hidden; padding-left: 150px;
     font-size: 22px;
     font-weight: 700;
     text-decoration: underline;
+  }
+  .modal-content{
+    width: 600px;
+    background-color: #fdbdc4;
   }
   
   .footer-distributed{
@@ -276,11 +284,11 @@ li a{ overflow: hidden; padding-left: 150px;
     </ul>
 </nav>
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="Reset">
         <div class="row"><h2 class="text-center c">Select the intensity of berries</h2>
-            <div class="col-md-4"><p class="text-center"><button onclick="changeimage1()" class="btn btn-light b1"> light </button></p></div>
-            <div class="col-md-4"><p class="text-center"> <button onclick="changeimage2()"class="btn btn-light b1"> medium</button></p></div>
-            <div class="col-md-4"><p class="text-center"><button onclick="changeimage3()" class="btn btn-light b1"> Strong</button></p></div>
+            <div class="col-md-4"><p class="text-center"><button onclick="changeimage1();result()" class="btn btn-light b1"> light </button></p></div>
+            <div class="col-md-4"><p class="text-center"> <button onclick="changeimage2(); result1()"class="btn btn-light b1"> medium</button></p></div>
+            <div class="col-md-4"><p class="text-center"><button onclick="changeimage3();result3()" class="btn btn-light b1"> Strong</button></p></div>
             <div class="row"> <p class="text-center">
                 <img src="./empty.png"   class="responsive" id="image"  ></p>
             </div>
@@ -290,9 +298,9 @@ li a{ overflow: hidden; padding-left: 150px;
     </div>
     <div class="container-fluid" id="section1">
         <div class="row"><h2 class="text-center c">Select the Size</h2>
-            <div class="col-md-4">  <p class="text-center"><button onclick="changesize1()" class="btn btn-light b1"> Small </button></p></div>
-            <div class="col-md-4">               <p class="text-center"> <button onclick="changesize2()"class="btn btn-light b1"> Medium</button></p></div>
-            <div class="col-md-4"><p class="text-center"><button onclick="changesize3()" class="btn btn-light b1">Large</button></p></div>
+            <div class="col-md-4">  <p class="text-center"><button onclick="changesize1();resultsize()" class="btn btn-light b1"> Small </button></p></div>
+            <div class="col-md-4">               <p class="text-center"> <button onclick="changesize2();resultsize1()"class="btn btn-light b1"> Medium</button></p></div>
+            <div class="col-md-4"><p class="text-center"><button onclick="changesize3();resultsize3()" class="btn btn-light b1">Large</button></p></div>
             <div class="row"> <p class="text-center">
                 <img src="./small.png" class="responsive" id="image1" ></p>
             </div>
@@ -302,8 +310,8 @@ li a{ overflow: hidden; padding-left: 150px;
     </div>
     <div class="container-fluid" id="section3">
         <div class="row"><h2 class="text-center c">Select the ice</h2>
-            <div class="col-md-6">   <p class="text-center"><button onclick="changeice1()" class="btn btn-light b1"> ice</button></p></div>
-            <div class="col-md-6"><p class="text-center"><button onclick="changeice2()" class="btn btn-light b1">no ice</button></p></div>
+            <div class="col-md-6">   <p class="text-center"><button onclick="changeice1();resultice()" class="btn btn-light b1"> ice</button></p></div>
+            <div class="col-md-6"><p class="text-center"><button onclick="changeice2();resultice1()" class="btn btn-light b1">no ice</button></p></div>
            
             <div class="row"><p class="text-center">
                 <img src="./ice.png" class="responsive" id="image2" ></p>
@@ -314,8 +322,8 @@ li a{ overflow: hidden; padding-left: 150px;
     </div>
     <div class="container-fluid" id="section4">
         <div class="row"><h2 class="text-center c">Select the Sweetness</h2>
-            <div class="col-md-6">   <p class="text-center"><button onclick="changesugar()" class="btn btn-light b1"> Sugar</button></p></div>
-            <div class="col-md-6"><p class="text-center"><button onclick="changesugar1()" class="btn btn-light b1">No Sugar</button></p></div>
+            <div class="col-md-6"><p class="text-center"><button onclick="changesugar();resultsugar()" class="btn btn-light b1"> Sugar</button></p></div>
+            <div class="col-md-6"><p class="text-center"><button onclick="changesugar1();resultsugar1()" class="btn btn-light b1">No Sugar</button></p></div>
            
             <div class="row"><p class="text-center">
                 <img src="./sugar.png" class="responsive" id="image4" ></p>
@@ -326,8 +334,8 @@ li a{ overflow: hidden; padding-left: 150px;
     </div>
     <div class="container-fluid" id="section5">
         <div class="row"><h2 class="text-center c">Select the Milk</h2>
-            <div class="col-md-6">   <p class="text-center"><button onclick="changemilk()" class="btn btn-light b1">Whole Milk</button></p></div>
-            <div class="col-md-6"><p class="text-center"><button onclick="changemilk1()" class="btn btn-light b1">LactoseFree</button></p></div>
+            <div class="col-md-6"> <p class="text-center"><button onclick="changemilk();resultmilk()" class="btn btn-light b1">Whole Milk</button></p></div>
+            <div class="col-md-6"><p class="text-center"><button onclick="changemilk1();resultmilk1()" class="btn btn-light b1">LactoseFree</button></p></div>
            
             <div class="row"><p class="text-center">
                 <img src="./milk1.png" class="responsive" id="image5" ></p>
@@ -338,9 +346,9 @@ li a{ overflow: hidden; padding-left: 150px;
     </div>
     <div class="container-fluid" id="section6">
         <div class="row"><h2 class="text-center c">Select the Syrup</h2>
-            <div class="col-md-4"><p class="text-center"><button onclick="changesyrup1()" class="btn btn-light b1"> Vanilla </button></p></div>
-            <div class="col-md-4"> <p class="text-center"> <button onclick="changesyrup2()"class="btn btn-light b1">Strawberry</button></p></div>
-            <div class="col-md-4"><p class="text-center"><button onclick="changesyrup3()" class="btn btn-light b1">Caramel</button></p></div>
+            <div class="col-md-4"><p class="text-center"><button onclick="changesyrup1();resultsyrup()" class="btn btn-light b1"> Vanilla </button></p></div>
+            <div class="col-md-4"> <p class="text-center"> <button onclick="changesyrup2();resultsyrup1()"class="btn btn-light b1">Strawberry</button></p></div>
+            <div class="col-md-4"><p class="text-center"><button onclick="changesyrup3();resultsyrup3()" class="btn btn-light b1">Caramel</button></p></div>
             <div class="row"> <p class="text-center">
                 <img src="./syrup1.png" class="responsive" id="image6" ></p>
             </div>
@@ -349,26 +357,57 @@ li a{ overflow: hidden; padding-left: 150px;
         </div>
     </div>
     <div class="container-fluid" id="section7">
-        <div class="row"><h2 class="text-center c">Select the Syrup</h2>
-            <div class="col-md-4"><p class="text-center"><button onclick="changetop1()" class="btn btn-light b1"> Vanilla </button></p></div>
-            <div class="col-md-4"> <p class="text-center"> <button onclick="changetop2()"class="btn btn-light b1">Strawberry</button></p></div>
-            <div class="col-md-4"><p class="text-center"><button onclick="changetop3()" class="btn btn-light b1">Berry Special</button></p></div>
+        <div class="row"><h2 class="text-center c">Select the Foam</h2>
+            <div class="col-md-4"><p class="text-center"><button onclick="changetop1();resulttop()" class="btn btn-light b1"> Vanilla </button></p></div>
+            <div class="col-md-4"> <p class="text-center"> <button onclick="changetop2();resulttop1()"class="btn btn-light b1">Strawberry</button></p></div>
+            <div class="col-md-4"><p class="text-center"><button onclick="changetop3();resulttop3()" class="btn btn-light b1">Berry Special</button></p></div>
             <div class="row"> <p class="text-center">
                 <img src="./toppin1.png" class="responsive" id="image7" ></p>
             </div>
             <p class="text-center">
-                <a href="#section8"><button onclick="myimages()" class="btn btn-light b1">Done</button></a></p></div>
+  <button data-bs-toggle="modal" data-bs-target="#modal1"  class="btn btn-light b1">Done</button></p></div>
         </div>
     </div>
-    <div class="container-fluid" >
-        <div class="row" id="section8">
-            <p id="images"></p>
-
-        </div>
+    <div class="modal fade " id="modal1">
+      <div class="modal-dialog ">
+ <div class="modal-content ">
+ <div class="modal-header  text-center">
+ <h4 class="modal-title text-center">Your Order is Ready!</h4>
+  <button type="button" class="btn-close " data-bs-dismiss="modal"></button>
+     </div>
+   <div class="modal-body ">
+  <div class="container-fluid">
+    <div class="row ">
+      <div class="col-md-2 "> <img src="./null.png" id="show" width="100px"> </div>
+      <div class="col-md-2"><img src="./icons8-plus-math-24.png" style="padding: 50px;"></div>
+      <div class="col-md-2"><img src="./null.png" id="show1" width="100px"> </div>
+      <div class="col-md-2"><img src="./icons8-plus-math-24.png" style="padding: 50px;"></div>
+      <div class="col-md-2" ><img src="./null.png" id="show2" width="100px"> </div>
+      <div class="col-md-2"><img src="./icons8-plus-math-24.png" style="padding: 50px;"></div>
+      </div>
+   <div class="row"> 
+    <div class="col-md-2"><img src="./null.png" id="show3" width="100px"> </div>
+    <div class="col-md-2"><img src="./icons8-plus-math-24.png" style="padding: 50px;"></div>
+      <div class="col-md-2"><img src="./null.png" id="show4" width="100px"> </div>
+      <div class="col-md-2"><img src="./icons8-plus-math-24.png" style="padding: 50px;"></div>
+      <div class="col-md-2"><img src="./null.png" id="show5" width="100px"></div>
+      <div class="col-md-2"><img src="./icons8-plus-math-24.png" style="padding: 50px;"></div>
+      <div class="col-md-2"><img src="./null.png" id="show6" width="100px"></div></div>
     </div>
-           <footer class="footer-distributed">
+  
+  </div>
+  <div class="row">
+    <p class="text-center">
+      <a href="#Reset"><button  class="btn btn-light b1" data-bs-dismiss="modal" >Reset</button></a>
+  <button class="btn btn-light b1" onclick="confirm()"  data-bs-dismiss="modal">Confirm</button></p>
+  </div>
 
-            <div class="footer-left">
+   </div> 
+  </div>
+    
+  </div>
+    <footer class="footer-distributed">
+   <div class="footer-left">
         <img src="logo.png" width="200px">
         
               <p class="footer-links">

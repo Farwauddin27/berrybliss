@@ -1,3 +1,4 @@
+// cutomization functions
 function changeimage1(){ 
     var img=document.getElementById('image');
     img.src = 'light.png';
@@ -10,6 +11,7 @@ function changeimage3(){
     var img=document.getElementById('image');
     img.src = 'strong.png';
 }
+
 function changesize1(){ 
     var img=document.getElementById('image1');
     img.src = 'small.png';
@@ -75,4 +77,83 @@ function changetop3(){
 function myimages(){
     var images=document.getElementById("images");
     img.src=["light.png","medium.png","strong.png"];
+}
+// result functions
+function result(){
+    var img=document.getElementById('show');
+   img.src = 'light.png';
+}
+function result1(){
+    var img=document.getElementById('show');
+    img.src = 'medium.png';
+}
+function result3(){
+    var img=document.getElementById('show');
+    img.src = 'strong.png';
+}
+function resultsize(){
+    var img=document.getElementById('show1');
+   img.src = 'small.png';
+}
+function resultsize1(){
+    var img=document.getElementById('show1');
+    img.src = 'medium (2).png';
+}
+function resultsize3(){
+    var img=document.getElementById('show1');
+    img.src = 'large.png';
+}
+function resultice(){
+    var img=document.getElementById('show2');
+    img.src = 'ice.png';
+
+}
+function resultice1(){
+    var img=document.getElementById('show2');
+    img.src = 'ice1.png';}
+function resultsugar(){
+    var img=document.getElementById('show3');
+    img.src = 'sugar.png';
+
+}
+function resultsugar1(){
+    var img=document.getElementById('show3');
+    img.src = 'sugarfree.png';
+}
+function resultmilk(){
+    var img=document.getElementById('show4');
+    img.src = 'milk1.png';
+}
+function resultmilk1(){
+    var img=document.getElementById('show4');
+    img.src = 'milk2.png';
+}
+function resultsyrup(){
+    var img=document.getElementById('show5');
+    img.src = 'syrup1.png';
+
+}
+function resultsyrup1(){
+    var img=document.getElementById('show5');
+    img.src = 'syrup2.png';
+}
+function resultsyrup3(){
+    var img=document.getElementById('show5');
+    img.src = 'syrup3.png';
+}
+function resulttop(){
+    var img=document.getElementById('show6');
+    img.src = 'toppin1.png';
+
+}
+function resulttop1(){
+    var img=document.getElementById('show6');
+    img.src = 'toppin2.png';
+}
+function resulttop3(){
+    var img=document.getElementById('show6');
+    img.src = 'topping3.png';
+}
+function confirm(){
+    alert("Login / Signup To Confirm !");
 }
